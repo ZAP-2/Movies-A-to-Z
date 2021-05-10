@@ -54,7 +54,9 @@ app.eventListeners = () => {
 
     // these lines ensure the default movie section and the scores reset after the 'next round' button is clicked
     app.arrowContainer.replaceChildren();
+    app.arrowContainer.innerHTML = '';
     app.defaultMovieSelection.replaceChildren();
+    app.defaultMovieSelection.innerHTML = '';
     app.messagePara.textContent = '';
     // clears the user input
     app.userInput.value = '';
@@ -125,6 +127,7 @@ app.eventListeners = () => {
 
     // ensures they dont append one after another
     app.overlay.replaceChildren();
+    app.overlay.innerHTML = '';
     app.overlay.appendChild(goBackButton);
     app.overlay.appendChild(confirmButton);
 
@@ -146,6 +149,7 @@ app.confirmMovie = (bothMovieRatings) => {
     if (button.id === 'go-back') {
       // this removes button duplicates from populating
       app.overlay.replaceChildren();
+      app.overlay.innerHTML = '';
       //bringing back the form
       app.overlay.classList.add('hide');
       app.form.classList.remove('hide');
@@ -323,6 +327,7 @@ app.compareMovies = (bothMovieRatings) => {
 app.resetGame = () => {
   // empty and hide the confirm/go back section 
   app.overlay.replaceChildren();
+  app.overlay.innerHTML = '';
   app.overlay.classList.add('hide');
   //hide the form
   app.form.classList.add('hide');
