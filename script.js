@@ -3,15 +3,7 @@ const app = {};
 app.init = () => {
   app.cachedSelectors();
   app.eventListeners();
-  app.getMovieObject();
   app.getDefaultMovieTitle();
-  app.makeMovieContent();
-  app.printMovieContent();
-  app.compareMovies();
-  app.confirmMovie();
-  app.createMessages();
-  app.scoreMessage();
-  app.resetGame();
 }
 
 // Cache existing html selectors we will need for appending
@@ -179,7 +171,7 @@ app.getDefaultMovieTitle = (title) => {
 //get movie object API call
 // these two parameters represent the title of the movie, and the id of which button triggered the API call: the form submit or the startButton
 app.getMovieObject = (title, buttonId) => {
-  const url = new URL('https://www.omdbapi.com/');
+  const url = new URL('http://www.omdbapi.com/');
   const key = 'ba8abefc';
   url.search = new URLSearchParams({
     apikey: key,
