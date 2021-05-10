@@ -3,7 +3,15 @@ const app = {};
 app.init = () => {
   app.cachedSelectors();
   app.eventListeners();
+  app.getMovieObject();
   app.getDefaultMovieTitle();
+  app.makeMovieContent();
+  app.printMovieContent();
+  app.compareMovies();
+  app.confirmMovie();
+  app.createMessages();
+  app.scoreMessage();
+  app.resetGame();
 }
 
 // Cache existing html selectors we will need for appending
