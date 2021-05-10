@@ -209,8 +209,9 @@ app.getMovieObject = (title, buttonId) => {
 //this function appends the movie content to the page. 
 //the parameters represent a new array returned from makeMovieContent(), and the id representing which button triggered this chain of events to ultimately land the movieContent in the right section.
 app.printMovieContent = (posterContent, buttonId, imdbRating) => {
-  //ensures the user
+  //ensures the user-movie does not append movies more than one at a time
   app.userMovieSelection.replaceChildren();
+  app.userMovieSelection.innerHTML = '';
   //loops through the movieContentArray and prints the content to the page
   app.ratings.push([buttonId, imdbRating]);
   
